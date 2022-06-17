@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+    body{
+      background-color: #1A1C28;
+      height:100;
+    }
+      .container{
+        display: flex;
+        margin: auto;
+        display: grid;
+        gap: 10px;
+        margin-top: 50%;
+        margin-bottom: 50%;
+        width: 50%;
+        height: 100%;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: 50% auto auto auto auto;
+      }
+      
+      .container > div{
+        padding: 20px 0;
+      }
+      
+      .item1{
+      grid-column: 1/ span 3;
+      grid-row: 1/span 3;
+      background-color:#EB5020;
+      }
+      .item2{
+      grid-column: 4/ span 2;
+      grid-row: 1/span 3;
+      background-color:#FFA401;
+      }
+      .item3{
+      grid-column: 1/span 2;
+      grid-row: 4/span 2;
+      background-color:#05AA42;
+      }
+      .item4, .item5{
+      grid-column: 3/span 3;
+      background-color: #01AEFD;
+      }
+      
+      @media screen and (min-width:1440px){
+        .container{
+          padding:3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    <div class="container">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+      <div class="item4"></div>
+      <div class="item5"></div>
+    </div>
+    </main>
+  </body>
+</html>
